@@ -1,0 +1,11 @@
+<h2>Add User</h2>
+<form (ngSubmit)="addUser()">
+    <input [(ngModel)]="newUser.username" name="username" required placeholder="Username" />
+    <input [(ngModel)]="newUser.email" name="email" required placeholder="Email" />
+    <button type="submit">Add User</button>
+</form>
+
+<h2>Users List</h2>
+<ul>
+    <li *ngFor="let user of users">{{ user.username }} - {{ user.email }}</li>
+</ul>
